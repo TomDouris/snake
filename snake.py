@@ -52,7 +52,7 @@ done = False
 
 score = 0
 gamelose = False
-gamesnake = Snake([Position(initialsnakex, initialsnakey)], initialdir)
+gamesnake = Snake((Position(initialsnakex, initialsnakey), initialdir))
 gamefood = Food()
 
 display_game_board(gamesnake,gamefood,score)
@@ -70,7 +70,7 @@ while not done:
                     #start a new game
                     score = 0
                     gamelose = False
-                    gamesnake = Snake([Position(initialsnakex, initialsnakey)], initialdir)
+                    gamesnake = Snake((Position(initialsnakex, initialsnakey), initialdir))
                     gamefood = Food()
                     display_game_board(gamesnake,gamefood,score)
                 if event.key == pygame.K_ESCAPE:
